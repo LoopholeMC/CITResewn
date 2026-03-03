@@ -16,8 +16,13 @@ plugins {
 
     id 'fabric-loom' version '1.7-SNAPSHOT' apply false
     id 'io.shcm.shsupercm.fabric.fletchingtable' version '1.6' apply false
-    id 'com.modrinth.minotaur' version '2.+' apply false
+    id 'com.modrinth.minotaur' version '2.8.10' apply false
     id 'com.matthewprenger.cursegradle' version '1.4.0' apply false
+}
+
+def maxSupportedGradle = org.gradle.util.GradleVersion.version('8.12')
+if (org.gradle.util.GradleVersion.current() > maxSupportedGradle) {
+    throw new GradleException("CIT Resewn currently requires Gradle ${maxSupportedGradle.version} or older due Fabric Loom 1.7 API compatibility (Problems.forNamespace).\nUse the project wrapper: ./gradlew (Gradle 8.8).\nDetected Gradle: ${org.gradle.util.GradleVersion.current().version}")
 }
 
 stonecutter.create(rootProject) {

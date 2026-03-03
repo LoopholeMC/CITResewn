@@ -1,3 +1,10 @@
+ - Added a Gradle version guard in settings to fail fast with a clear message when using unsupported global Gradle versions
+ - Documented JDK 21 requirement for local development (Java 25 can trigger classfile major version 69 errors in current toolchain)
+ - Publishing plugins are now configured only when TOKEN_MODRINTH / TOKEN_CURSEFORGE are provided
+ - Reverted Gradle wrapper to 8.8 for Fabric Loom 1.7 compatibility
+ - Pinned Modrinth Minotaur plugin to 2.8.10 (was dynamic 2.+) to avoid Java 25-incompatible plugin drift
+ - Publishing tokens now read from Gradle properties, so local non-publish builds no longer fail when TOKEN_* is unset
+ - Added support metadata for Minecraft 1.21.11
  - Fixed enchantment glints not working
  - Switched legacy Stonecutter out in favor of the newer [Stonecutter](https://stonecutter.kikugie.dev/)
  - Fixed 1.19.4 port

@@ -47,6 +47,12 @@ API usage documentation will be available soon over at [the docs](https://citres
 
 For example usage of the CIT Resewn API, take a look at how Defaults does it.
 
+## Development Requirements
+- JDK **21** (recommended)
+- Gradle wrapper from this repository (`./gradlew`, currently Gradle **8.8**)
+
+> Note: Running this project with newer Gradle versions (for example Gradle 8.14+ from a global install) can fail with Loom errors such as `Problems.forNamespace(...)`/`Unsupported class file major version 69`. Use `./gradlew` to ensure the supported Gradle version is used.
+
 ## Contributing
 
 Bug fixes and feature implementations are always welcome and will usually be accepted once verified to be ok/fit in the mod.

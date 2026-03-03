@@ -49,9 +49,9 @@ For example usage of the CIT Resewn API, take a look at how Defaults does it.
 
 ## Development Requirements
 - JDK **21** (recommended)
-- Gradle wrapper from this repository (`./gradlew`)
+- Gradle wrapper from this repository (`./gradlew`, currently Gradle **8.8**)
 
-> Note: Running this project with newer JDKs (for example Java 25) may fail during Gradle script/plugin loading with `Unsupported class file major version 69` due to upstream toolchain/plugin compatibility.
+> Note: Running this project with newer Gradle versions (for example Gradle 8.14+ from a global install) can fail with Loom errors such as `Problems.forNamespace(...)`/`Unsupported class file major version 69`. Use `./gradlew` to ensure the supported Gradle version is used.
 
 ## Contributing
 

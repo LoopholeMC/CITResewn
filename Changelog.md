@@ -1,3 +1,4 @@
+ - Added a Gradle version guard in settings to fail fast with a clear message when using unsupported global Gradle versions
  - Documented JDK 21 requirement for local development (Java 25 can trigger classfile major version 69 errors in current toolchain)
  - Publishing plugins are now configured only when TOKEN_MODRINTH / TOKEN_CURSEFORGE are provided
  - Reverted Gradle wrapper to 8.8 for Fabric Loom 1.7 compatibility

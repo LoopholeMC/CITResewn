@@ -22,7 +22,9 @@ plugins {
 
 def maxSupportedGradle = org.gradle.util.GradleVersion.version('8.12')
 if (org.gradle.util.GradleVersion.current() > maxSupportedGradle) {
-    throw new GradleException("CIT Resewn currently requires Gradle ${maxSupportedGradle.version} or older due Fabric Loom 1.7 API compatibility (Problems.forNamespace).\nUse the project wrapper: ./gradlew (Gradle 8.8).\nDetected Gradle: ${org.gradle.util.GradleVersion.current().version}")
+    logger.warn("[CIT Resewn] Detected Gradle ${org.gradle.util.GradleVersion.current().version} (> ${maxSupportedGradle.version}). " +
+            "Fabric Loom 1.7 may fail on newer Gradle versions (e.g. Problems.forNamespace). " +
+            "If configuration fails, use the project wrapper: ./gradlew (Gradle 8.8).")
 }
 
 stonecutter.create(rootProject) {

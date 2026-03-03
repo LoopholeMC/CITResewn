@@ -1,3 +1,4 @@
+ - Documented JDK 21 requirement for local development (Java 25 can trigger classfile major version 69 errors in current toolchain)
  - Publishing plugins are now configured only when TOKEN_MODRINTH / TOKEN_CURSEFORGE are provided
  - Reverted Gradle wrapper to 8.8 for Fabric Loom 1.7 compatibility
  - Pinned Modrinth Minotaur plugin to 2.8.10 (was dynamic 2.+) to avoid Java 25-incompatible plugin drift

@@ -1,3 +1,5 @@
+ - Pinned Fabric Loom to 1.7.4 (from snapshot) to avoid Java 25-incompatible snapshot plugin bytecode
+ - Added support metadata for Minecraft 1.21.11
  - Fixed enchantment glints not working
  - Switched legacy Stonecutter out in favor of the newer [Stonecutter](https://stonecutter.kikugie.dev/)
  - Fixed 1.19.4 port
